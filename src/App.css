@@ -1,38 +1,263 @@
-.App {
+/* Общие стили */
+body {
+  background: rgb(30, 30, 30);
+  display: flex;
+  margin: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.logo {
+  color: orange;
+  padding-left: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: orange;
+  border: none;
+  color: white;
+  padding: 15px 32px;
   text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.button1 {
+  background-color: rgb(30, 30, 30);
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.left_column {
+  flex: 1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: rgb(30, 30, 30);
+  padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.right_column {
+  flex: 1;
+  background: black;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.right_column img {
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Адаптация под компьютеры и ноутбуки */
+@media (min-width: 1200px) {
+  .sublogos-container {
+    display: flex;
+    margin-top: 200px;
+    padding-left: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .sublogo1, .sublogo3 {
+    color: orange;
+    margin-right: 20px;
+  }
+
+  .sublogo2, .sublogo {
+    color: rgb(255, 255, 255);
+    margin-right: 20px;
+  }
+
+  .textbox {
+    padding-left: 20px;
+    color: rgb(170, 170, 170);
+    font-size: small;
+  }
+
+  .footer {
+    padding-left: 20px;
+    padding-top: 25%;
+    color: rgb(170, 170, 170);
+    font-size: small;
+  }
+
+  .icons {
+    padding-left: 20px;
+    padding-top: 5%;
+    color: rgb(170, 170, 170);
+  }
+
+  .centered,
+  .centered2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: auto;
+  }
+
+  .centered {
+    font-size: xx-large;
+  }
+
+  .centered2 {
+    font-size: 50px;
+    color: orange;
   }
 }
+
+/* Адаптация под планшеты */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .sublogos-container {
+    display: flex;
+    margin-top: 100px;
+    padding-left: 20px;
+  }
+
+  .sublogo1, .sublogo3 {
+    color: orange;
+    margin-right: 20px;
+  }
+
+  .sublogo2, .sublogo {
+    color: rgb(255, 255, 255);
+    margin-right: 20px;
+  }
+
+  .textbox {
+    padding-left: 20px;
+    color: rgb(170, 170, 170);
+    font-size: small;
+  }
+
+  .footer {
+    padding-left: 20px;
+    padding-top: 25%;
+    color: rgb(170, 170, 170);
+    font-size: small;
+  }
+
+  .icons {
+    padding-left: 20px;
+    padding-top: 5%;
+    color:
+    rgb(170, 170, 170);
+  }
+  
+  .centered,
+  .centered2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: auto;
+  }
+  
+  .centered {
+    font-size: x-large;
+  }
+  
+  .centered2 {
+    font-size: 40px;
+    color: orange;
+  }
+  }
+  
+  /* Адаптация под телефоны */
+  @media (max-width: 767px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .left_column {
+    padding: 20px;
+  }
+  
+  .right_column {
+    padding: 20px;
+  }
+  
+  .sublogos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .sublogo1, .sublogo3 {
+    color: orange;
+    margin-right: 0;
+    text-align: center;
+  }
+  
+  .sublogo2, .sublogo {
+    color: rgb(255, 255, 255);
+    margin-right: 0;
+    text-align: center;
+  }
+  
+  .textbox {
+    padding-left: 20px;
+    color: rgb(170, 170, 170);
+    font-size: small;
+  }
+
+  .footer {
+    padding-left: 20px;
+    padding-top: 25%;
+    color: rgb(170, 170, 170);
+    font-size: small;
+  }
+
+  .icons {
+    padding-left: 20px;
+    padding-top: 5%;
+    color:
+    rgb(170, 170, 170);
+  }
+  
+  .centered,
+  .centered2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: auto;
+  }
+  
+  .centered {
+    font-size: large;
+  }
+  
+  .centered2 {
+    font-size: 30px;
+    color: orange;
+  }
+  }
+    
